@@ -18,3 +18,24 @@ uv run python -m ipykernel install --user --name cdazzdev-mle
 ```
 
 Python is pinned to **3.12** (`.python-version`) to match the Google Colab runtime.
+
+## Secrets
+
+Copy `.env.example` to `.env` and fill in your keys. `.env` is git-ignored — no API keys or
+tokens are ever committed. On Google Colab the notebooks read the same names from
+**Colab Secrets** instead.
+
+## Repository layout
+
+```
+.
+├── task2_genai/            # Task 2 - Generative AI (domain fine-tuning)
+│   ├── data/               # synthetic dataset (train / val / test JSONL)
+│   ├── models/             # local checkpoints & merged model (git-ignored)
+│   ├── notebooks/          # executable notebooks (run on Colab T4)
+│   ├── prompts/            # teacher-model prompts
+│   └── reports/            # charts and metric summaries
+├── CITATIONS.md            # AI-tool and open-source citations
+├── .env.example            # template for required secrets
+└── pyproject.toml / uv.lock
+```

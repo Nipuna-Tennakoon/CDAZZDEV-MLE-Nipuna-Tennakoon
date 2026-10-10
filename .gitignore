@@ -8,3 +8,21 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Secrets - NEVER commit credentials (assessment rule 2.3)
+.env
+.env.*
+!.env.example
+*service-account*.json
+*-sa.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model weights / checkpoints are large -> pushed to Hugging Face Hub instead of git
+task2_genai/models/*
+!task2_genai/models/.gitkeep
+
+# Experiment tracking local caches
+wandb/
+mlruns/
