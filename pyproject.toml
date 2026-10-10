@@ -1,0 +1,13 @@
+[project]
+name = "cdazzdev-mle-nipuna-tennakoon"
+version = "0.1.0"
+description = "CDAZZDEV Senior MLE technical assessment - Nipuna Tennakoon"
+readme = "README.md"
+# Google Colab runs Python 3.12, so we pin 3.12 locally to keep both environments identical.
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "ipykernel>=6.29.0",
+    "numpy>=2.0.0",
+    "pandas>=2.2.0",
+    "python-dotenv>=1.0.1",
+]
