@@ -39,3 +39,13 @@ tokens are ever committed. On Google Colab the notebooks read the same names fro
 ├── .env.example            # template for required secrets
 └── pyproject.toml / uv.lock
 ```
+
+## Task 2 - Generative AI: Skin Symptom-Intake Agent
+
+**Use case (medical triage):** a small model that runs the intake step before a skin
+consultation - it asks the patient short, calm, one-at-a-time symptom questions, never
+diagnoses, never recommends medication, and escalates red flags to emergency care.
+
+| Notebook | Purpose |
+|---|---|
+| `task2_genai/notebooks/01_data_generation.ipynb` | Synthetic dataset from free-tier teacher models (Groq Llama-3.3-70B / GPT-OSS-120B, OpenRouter), dedup, diversity analysis, 80/10/10 split |
