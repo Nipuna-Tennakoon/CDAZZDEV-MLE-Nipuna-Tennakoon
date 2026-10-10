@@ -6,12 +6,18 @@ readme = "README.md"
 # Google Colab runs Python 3.12, so we pin 3.12 locally to keep both environments identical.
 requires-python = ">=3.12,<3.14"
 dependencies = [
+    "accelerate>=1.0.0",
+    "bitsandbytes>=0.45.0",
+    "datasets>=3.0.0",
+    "huggingface-hub>=0.25.0",
     "ipykernel>=6.29.0",
     "matplotlib>=3.9.0",
     "numpy>=2.0.0",
     "openai>=1.50.0",
+    "peft>=0.13.0",
     "pandas>=2.2.0",
     "python-dotenv>=1.0.1",
     "torch>=2.5.0",
     "transformers>=4.56.0",
+    "wandb>=0.18.0",
 ]

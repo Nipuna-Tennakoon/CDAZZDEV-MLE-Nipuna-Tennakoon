@@ -9,13 +9,16 @@ repository, as required by Section 2.2 of the assessment.
 |---|------|-------|------------------|------|
 | 1 | Claude (claude-opus-5-5), Cowork | Project scaffold: `pyproject.toml`, `.gitignore`, `.env.example`, folder layout | "Initialize the project with uv and create the data / models / .env structure" | 2026-10-10 |
 | 2 | Claude (claude-opus-5-5), Cowork | `task2_genai/notebooks/01_data_generation.ipynb`, `task2_genai/prompts/teacher_skin_intake.md` | "Create a synthetic data generation notebook adapted from my llm-fine-tuning-medical-chat project, using free-tier teacher models" | 2026-10-10 |
+| 3 | Claude (claude-opus-5-5), Cowork | `task2_genai/notebooks/02_finetuning.ipynb` (QLoRA config, W&B integration, per-epoch loss callback, merge + Hub push) | "Create a fine-tuning notebook as developed in my llm-fine-tuning project, configured with Weights & Biases for metric monitoring" | 2026-10-10 |
 
 ## Adapted code
 
 | # | Source | Used in | Notes |
 |---|--------|---------|-------|
 | 1 | Author's own prior project `llm-fine-tuning-medical-chat` (private, MedirAI) - `notebooks/data_synthesis.ipynb`, `prompts/symptom_gathering_synthetic.md` | `01_data_generation.ipynb` | Quality gate, exact + PubMedBERT semantic de-duplication and leakage checks re-used; teacher pool moved to free-tier Groq / OpenRouter, generation stratified by concern, split changed to 80/10/10, diversity analysis added |
-| 2 | `NeuML/pubmedbert-base-embeddings` - https://huggingface.co/NeuML/pubmedbert-base-embeddings | `01_data_generation.ipynb` | Sentence embeddings for near-duplicate detection |
+| 2 | Author's own prior project `llm-fine-tuning-medical-chat` - `notebooks/training.ipynb` | `02_finetuning.ipynb` | Prompt/target split with `-100` label masking and LoRA target modules re-used; MLflow replaced by Weights & Biases, full-FT/LoRA replaced by 4-bit NF4 QLoRA, merge + Hub push added |
+| 3 | Dettmers et al., *QLoRA: Efficient Finetuning of Quantized LLMs* (2023) - https://arxiv.org/abs/2305.14314 | `02_finetuning.ipynb` | NF4 + double quantisation, all-linear-layer LoRA, paged 8-bit AdamW, max grad norm 0.3 |
+| 4 | `NeuML/pubmedbert-base-embeddings` - https://huggingface.co/NeuML/pubmedbert-base-embeddings | `01_data_generation.ipynb` | Sentence embeddings for near-duplicate detection |
 
 ## Teacher-model prompts
 

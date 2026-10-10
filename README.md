@@ -49,3 +49,6 @@ diagnoses, never recommends medication, and escalates red flags to emergency car
 | Notebook | Purpose |
 |---|---|
 | `task2_genai/notebooks/01_data_generation.ipynb` | Synthetic dataset from free-tier teacher models (Groq Llama-3.3-70B / GPT-OSS-120B, OpenRouter), dedup, diversity analysis, 80/10/10 split |
+| `task2_genai/notebooks/02_finetuning.ipynb` | QLoRA (4-bit NF4) fine-tuning of Qwen2.5-1.5B-Instruct on a Colab T4, justified hyperparameters, per-epoch train/val loss tracked in Weights & Biases, `merge_and_unload()` and push to Hugging Face Hub |
+
+Run order: `01_data_generation.ipynb` -> `02_finetuning.ipynb`.
