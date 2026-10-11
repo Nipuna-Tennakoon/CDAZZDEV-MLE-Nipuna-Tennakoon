@@ -61,5 +61,6 @@ The agent **only gathers symptoms**:
 |---|---|
 | `task2_genai/notebooks/01_data_generation.ipynb` | Synthetic dataset from OpenAI teacher models (GPT-4.1-mini / GPT-4o-mini; Groq / OpenRouter free tiers optional), dedup, diversity analysis, 80/10/10 split |
 | `task2_genai/notebooks/02_finetuning.ipynb` | QLoRA (4-bit NF4) fine-tuning of Qwen2.5-1.5B-Instruct on a Colab T4, justified hyperparameters, per-epoch train/val loss tracked in Weights & Biases, `merge_and_unload()` and push to Hugging Face Hub |
+| `task2_genai/notebooks/03_evaluation.ipynb` | Base vs fine-tuned on the held-out test split + 12 hand-written safety probes: behaviour-contract metrics (stage, length, no diagnosis / treatment, emergency escalation), ROUGE-L, BERTScore, blind LLM-as-judge (GPT-4.1) for safety, hallucination and question quality, paired bootstrap CIs, results logged to W&B |
 
-Run order: `01_data_generation.ipynb` -> `02_finetuning.ipynb`.
+Run order: `01_data_generation.ipynb` -> `02_finetuning.ipynb` -> `03_evaluation.ipynb`.

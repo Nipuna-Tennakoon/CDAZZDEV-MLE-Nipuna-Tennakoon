@@ -20,4 +20,6 @@ dependencies = [
     "torch>=2.5.0",
     "transformers>=4.56.0",
     "wandb>=0.18.0",
+    "rouge-score>=0.1.2",
+    "bert-score>=0.3.13",
 ]
