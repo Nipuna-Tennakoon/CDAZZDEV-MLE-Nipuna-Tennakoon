@@ -1,0 +1,141 @@
+{
+  "split_sizes": {
+    "train": 240,
+    "val": 30,
+    "test": 30
+  },
+  "diversity": {
+    "n_records": 300,
+    "n_concerns_covered": 15,
+    "max_concern_share": 0.077,
+    "user_distinct_1": 0.12,
+    "user_distinct_2": 0.494,
+    "assistant_distinct_2": 0.353,
+    "assistant_unique_opener_ratio": 0.353,
+    "mean_nn_cosine": 0.871,
+    "max_nn_cosine": 0.95
+  },
+  "concern_counts": {
+    "back_joint_muscle": 23,
+    "cough_throat": 22,
+    "fever_flu_like": 22,
+    "stomach_digestion": 22,
+    "head_dizziness": 22,
+    "breathing_chest": 21,
+    "eye_ear": 19,
+    "urinary": 19,
+    "skin_hair_nails": 19,
+    "womens_health": 19,
+    "mood_sleep": 19,
+    "red_flag_emergency": 19,
+    "diagnosis_or_medication_request": 19,
+    "fatigue_general": 18,
+    "off_topic_redirect": 17
+  },
+  "teacher_counts": {
+    "gpt-4.1-mini": 240,
+    "gpt-4o-mini": 60
+  },
+  "top_keywords": [
+    [
+      "feeling",
+      73
+    ],
+    [
+      "feel",
+      66
+    ],
+    [
+      "fever",
+      57
+    ],
+    [
+      "sometimes",
+      56
+    ],
+    [
+      "started",
+      52
+    ],
+    [
+      "tired",
+      45
+    ],
+    [
+      "worse",
+      42
+    ],
+    [
+      "after",
+      38
+    ],
+    [
+      "pain",
+      37
+    ],
+    [
+      "night",
+      33
+    ],
+    [
+      "mostly",
+      30
+    ],
+    [
+      "few",
+      29
+    ],
+    [
+      "lately",
+      29
+    ],
+    [
+      "feels",
+      28
+    ],
+    [
+      "more",
+      26
+    ],
+    [
+      "last",
+      25
+    ],
+    [
+      "throat",
+      24
+    ],
+    [
+      "sore",
+      24
+    ],
+    [
+      "cough",
+      23
+    ],
+    [
+      "lot",
+      22
+    ],
+    [
+      "pretty",
+      22
+    ],
+    [
+      "work",
+      22
+    ],
+    [
+      "hurts",
+      21
+    ],
+    [
+      "back",
+      21
+    ],
+    [
+      "headache",
+      21
+    ]
+  ]
+}
