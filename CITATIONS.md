@@ -10,6 +10,7 @@ repository, as required by Section 2.2 of the assessment.
 | 1 | Claude (claude-opus-5-5), Cowork | Project scaffold: `pyproject.toml`, `.gitignore`, `.env.example`, folder layout | "Initialize the project with uv and create the data / models / .env structure" | 2026-10-10 |
 | 2 | Claude (claude-opus-5-5), Cowork | `task2_genai/notebooks/01_data_generation.ipynb`, `task2_genai/prompts/teacher_skin_intake.md` | "Create a synthetic data generation notebook adapted from my llm-fine-tuning-medical-chat project, using free-tier teacher models" | 2026-10-10 |
 | 3 | Claude (claude-opus-5-5), Cowork | `task2_genai/notebooks/02_finetuning.ipynb` (QLoRA config, W&B integration, per-epoch loss callback, merge + Hub push) | "Create a fine-tuning notebook as developed in my llm-fine-tuning project, configured with Weights & Biases for metric monitoring" | 2026-10-10 |
+| 4 | Claude (claude-opus-5-5), Claude Code | Scope change from skin intake to general-practice intake: `task2_genai/prompts/teacher_gp_intake.md` (renamed from `teacher_skin_intake.md`), system prompt, concern taxonomy and quality-gate patterns in `01_data_generation.ipynb`, W&B / Hub names in `02_finetuning.ipynb`, README | "Convert the skin symptom-intake agent into a general practitioner intake agent that asks general questions about any body part, only gathers symptoms, and never diagnoses or suggests medication" | 2026-10-11 |
 
 ## Adapted code
 

@@ -40,11 +40,22 @@ tokens are ever committed. On Google Colab the notebooks read the same names fro
 └── pyproject.toml / uv.lock
 ```
 
-## Task 2 - Generative AI: Skin Symptom-Intake Agent
+## Task 2 - Generative AI: General-Practice Symptom-Intake Agent
 
-**Use case (medical triage):** a small model that runs the intake step before a skin
-consultation - it asks the patient short, calm, one-at-a-time symptom questions, never
-diagnoses, never recommends medication, and escalates red flags to emergency care.
+**Use case (medical triage):** a small, patient-facing model that runs the intake step before
+a general practitioner (GP) consultation. It covers concerns in **any part of the body**
+(fever, cough, headache, stomach, urinary, joints, skin, mood, sleep, ...) and asks short,
+calm, one-at-a-time questions at **general-practice depth** - broad, plain-language questions
+that give the doctor enough for a first impression, not specialist work-ups.
+
+The agent **only gathers symptoms**:
+
+- it never diagnoses, names or hints at a possible condition, or lists causes;
+- it never recommends, prescribes or comments on medicines, doses, treatments or self-care;
+- when the patient asks "what do I have?" or "what should I take?", it defers to the doctor
+  and keeps gathering symptoms;
+- it closes by recapping the symptoms and handing them over to the clinician, and the only
+  action it ever directs is emergency care for red flags (e.g. chest pain with breathlessness).
 
 | Notebook | Purpose |
 |---|---|
